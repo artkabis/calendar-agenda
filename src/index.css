@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.rbc-events-container {
+  display: grid;
+  grid-template-rows: repeat(25, 40px);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Fix bug for 3,4,9,12,14,17 events **/
+div[title*='event-3'] {
+  grid-row: 20 / span 1;
+}
+div[title*='event-4'] {
+  grid-row: 16 / span 1;
+}
+div[title*='event-9'] {
+  grid-row: 11 / span 1;
+}
+div[title*='event-12'] {
+  grid-row: 10 / span 1;
+}
+div[title*='event-14'] {
+  grid-row: 20 / span 1;
+}
+div[title*='event-17'] {
+  grid-row: 15 / span 1;
+}
+
+.rbc-day-slot .rbc-events-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.rbc-day-slot .rbc-event {
+  position: static;
+}
+
+.rbc-day-slot .rbc-event--yellow {
+  background-color: #fbab18;
+}
+.rbc-day-slot .rbc-event--red {
+  background-color: #fb3318;
+}
+.rbc-day-slot .rbc-event--orange {
+  background-color: #fb7318;
+}
+.rbc-day-slot .rbc-event--purple {
+  background-color: #a018fb;
+}
+
+.rbc-day-slot .rbc-event--blue {
+  background-color: #187afb;
+}
+
+.rbc-day-slot .rbc-event--green {
+  background-color: #6ebe4a;
 }
